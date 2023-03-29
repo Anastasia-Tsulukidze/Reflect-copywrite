@@ -816,7 +816,8 @@ footer p {
   color: rgb(156, 163, 175);
   margin-left: 20px;
   position: sticky;
-  top: 0;
+  height: 100%;
+  top: 50px;
 }
 .first-cont-flex div h2 {
   font-weight: 600;
