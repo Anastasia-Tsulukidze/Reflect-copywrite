@@ -10,42 +10,45 @@
   </head>
   <html>
     <body>
-      <header class="container">
-        <nav class="container">
-          <ul class="navigation">
+      <header>
+        <nav class="container navigation">
+          <div class="reflect-title">
+            <a class="reflect" href="./../../index.html">
+              <img src="./../img/logo.png" alt="reflect logo" />Reflect</a
+            >
+          </div>
+          <ul class="mid-nav middle-nav">
             <li>
-              <a class="reflect" href="./../../index.html">
-                <img src="./../img/logo.png" alt="reflect logo" />Reflect</a
-              >
+              <a href="./../../index.html">Product</a>
             </li>
-            <ul class="mid-nav">
-              <li>
-                <a href="./../../index.html">Product</a>
-              </li>
-              <li>
-                <a href="./../../index.html">Pricing</a>
-              </li>
-              <li>
-                <a href="./../../index.html">Company</a>
-              </li>
-              <li>
-                <a href="#">Blog</a>
-              </li>
-              <li>
-                <a href="./changelog.html">Changelog</a>
-              </li>
-            </ul>
-            <ul class="mid-nav">
-              <li>
-                <a href="#">Login</a>
-              </li>
-              <li>
-                <a href="#">
-                  <button>Start Free Trial</button>
-                </a>
-              </li>
-            </ul>
+            <li>
+              <a href="./../../index.html">Pricing</a>
+            </li>
+            <li>
+              <a href="./../../index.html">Company</a>
+            </li>
+            <li>
+              <a href="#">Blog</a>
+            </li>
+            <li>
+              <a href="./changelog.html">Changelog</a>
+            </li>
           </ul>
+          <ul class="mid-nav back-nav">
+            <li>
+              <a id="myBtn" href="#">Login</a>
+            </li>
+            <li>
+              <a href="#">
+                <button id="myBtn">Start Free Trial</button>
+              </a>
+            </li>
+          </ul>
+          <div class="burger">
+            <div></div>
+            <div></div>
+            <div></div>
+          </div>
         </nav>
       </header>
       <main class="container">
@@ -143,6 +146,7 @@
         <p>Unsubscribe at any time.</p>
         <p class="copyright">&copy; Copyright</p>
       </footer>
+      <script src="./../js/app.js"></script>
     </body>
   </html>
 </html>
