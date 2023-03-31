@@ -92,6 +92,7 @@ header {
   height: 3px;
   background: aliceblue;
   margin: 0.5rem 0;
+  transition: transform 0.6s ease;
 }
 
 /* CONTENT */
@@ -395,6 +396,7 @@ main {
 }
 .content-flex {
   display: flex;
+  align-items: flex-start;
   gap: 20px;
   margin-bottom: 30px;
 }
@@ -734,10 +736,16 @@ footer p {
   cursor: pointer;
 }
 .blog-content {
-  display: grid;
+  /* display: grid;
   grid-template-columns: repeat(3, 1fr);
   grid-template-rows: repeat(2, 1fr);
-  gap: 50px;
+  gap: 30px; */
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+.blog-content div {
+  max-width: 362px;
 }
 .blog-content div div a {
   text-decoration: none;
@@ -827,7 +835,7 @@ footer p {
   flex-direction: column;
   margin-top: 100px;
   gap: 30px;
-  margin-left: 300px;
+  margin-left: 10%;
 }
 .changelog-p {
   font-size: 18px;
@@ -866,7 +874,7 @@ footer p {
 .first-cont-flex {
   display: flex;
   margin-top: 80px;
-  justify-content: space-between;
+  gap: 20px;
   padding-bottom: 80px;
 }
 .first-cont-flex div img {
@@ -874,8 +882,8 @@ footer p {
   border-radius: 10px;
 }
 .first-cont-flex div {
-  max-width: 65ch;
-  margin-right: 270px;
+  max-width: 100%;
+  justify-self: flex-start;
 }
 .first-cont-flex .sticky {
   font-size: 1rem;
@@ -903,6 +911,7 @@ footer p {
   list-style: disc;
   margin-left: 30px;
   margin-bottom: 20px;
+  color: rgb(201, 209, 217);
 }
 /* modal */
 .glass-buttons {
@@ -925,6 +934,11 @@ footer p {
 .glass-container p {
   text-align: center;
   margin: 30px 0;
+  color: rgb(156, 163, 175);
+}
+.glass-container h2 {
+  color: #c2c1df;
+  font-size: 20px;
 }
 .glass-container div input {
   background: #03010c;
@@ -974,16 +988,28 @@ footer p {
   height: 100%;
   top: 0;
   left: 0;
+  background: rgba(16, 4, 77, 0.5);
+  backdrop-filter: blur(4px);
 }
 .glass-container {
   border-radius: 15px;
-  margin: 100px auto;
+  margin: 50px auto;
   padding: 30px;
   box-sizing: border-box;
   text-align: center;
-  background: rgba(25, 9, 107, 0.5);
-  backdrop-filter: blur(6px);
-  -webkit-backdrop-filter: blur(6px);
+  background: rgb(23, 8, 97);
+}
+
+.burger.burger__active div:nth-child(1) {
+  transform: rotate(32deg) translateY(13px);
+}
+
+.burger.burger__active div:nth-child(2) {
+  opacity: 0;
+}
+
+.burger.burger__active div:nth-child(3) {
+  transform: rotate(-32deg) translateY(-13px);
 }
 @media (max-width: 1024px) {
   header nav .mid-nav:first-child {
@@ -993,6 +1019,14 @@ footer p {
   .info {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
+  }
+  .blog-content {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 15px;
+  }
+  .mid-nav {
+    margin-left: 30px;
   }
 }
 @media (max-width: 768px) {
@@ -1095,6 +1129,53 @@ footer p {
   .footer-nav {
     flex-wrap: wrap;
   }
+  .blog-nav {
+    flex-wrap: wrap;
+  }
+  .blog-content {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    /* flex-direction: column; */
+  }
+  .blog-content div h3 {
+    max-width: 70%;
+  }
+  .blog-content div {
+    max-width: 362px;
+  }
+  .blog-flex {
+    flex-direction: column;
+  }
+  .input {
+    padding: 10px 10px;
+    align-self: center;
+    max-width: 100%;
+  }
+  .blog-flex button {
+    max-width: 40%;
+    align-self: center;
+  }
+  .date {
+    display: inline-block;
+    max-width: 90%;
+    margin-right: 0;
+  }
+  .border-bottom {
+    display: flex;
+    justify-content: flex-end;
+    max-width: 100%;
+  }
+  .first-cont-flex {
+    max-width: 100%;
+    justify-content: space-between;
+  }
+  .first-cont-flex div {
+    max-width: 80%;
+  }
+  .first-cont-flex div img {
+    max-width: 90%;
+  }
 }
 @media (max-width: 480px) {
   .first-box {
@@ -1187,5 +1268,32 @@ footer p {
   }
   footer img {
     max-width: 100%;
+  }
+  .blog-content div img {
+    max-width: 100%;
+  }
+  .date {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+  .date a {
+    align-self: flex-start;
+  }
+  .changelog-main {
+    justify-content: center;
+    max-width: 100%;
+  }
+  .changelog-flex {
+    flex-direction: column;
+  }
+  .changelog-flex button {
+    max-width: 50%;
+  }
+  .changelog-title {
+    font-size: 45px;
+  }
+  .glass-container {
+    max-width: 90%;
   }
 }

@@ -2,6 +2,8 @@ const navBurger = document.querySelector(".burger");
 const navLinks = document.querySelector(".mid-nav");
 const modal = document.getElementById("myModal");
 const btns = document.querySelectorAll(".myBtn");
+const navigationBurger = document.getElementById("nav-burger");
+const htmlElement = document.querySelector("html");
 
 function navActiveToggler() {
   navLinks.classList.toggle("mid-nav__active");
@@ -20,3 +22,12 @@ window.onclick = function (event) {
     modal.style.display = "none";
   }
 };
+
+function navBarActiveHandler() {
+  document.documentElement.scrollTop = 0;
+  htmlElement.classList.toggle("overflow-h");
+  navigationBurger.classList.toggle("burger__active");
+}
+
+// events
+navigationBurger.addEventListener("click", navBarActiveHandler);
