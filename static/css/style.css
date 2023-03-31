@@ -1137,6 +1137,7 @@ footer p {
     flex-wrap: wrap;
     justify-content: center;
     /* flex-direction: column; */
+    gap: 50px;
   }
   .blog-content div h3 {
     max-width: 70%;
@@ -1271,6 +1272,12 @@ footer p {
   }
   .blog-content div img {
     max-width: 100%;
+  }
+  .blog-content {
+    gap: 50px;
+  }
+  .blog-content div h3 {
+    margin-top: 10px;
   }
   .date {
     display: flex;
