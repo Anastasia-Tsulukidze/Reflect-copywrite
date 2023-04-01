@@ -30,3 +30,5 @@ function navBarActiveHandler() {
   htmlElement.classList.toggle("overflow-h");
   navigationBurger.classList.toggle("burger__active");
 }
+
+navBurger.addEventListener("click", navBarActiveHandler);
