@@ -4,10 +4,10 @@ const modal = document.getElementById("myModal");
 const btns = document.querySelectorAll(".myBtn");
 const navigationBurger = document.getElementById("nav-burger");
 const htmlElement = document.querySelector("html");
+const body = document.querySelector("body");
 
 function navActiveToggler() {
   navLinks.classList.toggle("mid-nav__active");
-  // console.log("hey");
 }
 
 navBurger.addEventListener("click", navActiveToggler);
@@ -15,11 +15,13 @@ navBurger.addEventListener("click", navActiveToggler);
 for (let i = 0; i < btns.length; i++) {
   btns[i].addEventListener("click", function () {
     modal.style.display = "block";
+    body.style.position = "fixed";
   });
 }
 window.onclick = function (event) {
   if (event.target == modal) {
     modal.style.display = "none";
+    body.style.position = "static";
   }
 };
 
@@ -28,6 +30,3 @@ function navBarActiveHandler() {
   htmlElement.classList.toggle("overflow-h");
   navigationBurger.classList.toggle("burger__active");
 }
-
-// events
-navigationBurger.addEventListener("click", navBarActiveHandler);
