@@ -5,6 +5,7 @@ const btns = document.querySelectorAll(".myBtn");
 const navigationBurger = document.getElementById("nav-burger");
 const htmlElement = document.querySelector("html");
 const body = document.querySelector("body");
+const pricing = document.getElementById("nav-pricing");
 
 function navActiveToggler() {
   navLinks.classList.toggle("mid-nav__active");
